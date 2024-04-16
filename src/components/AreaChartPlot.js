@@ -1,47 +1,18 @@
+import React from 'react';
+import useSWR from 'swr';
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
+const fetcher = url => fetch(url).then(res => res.json());
+
 const AreaChartPlot = () => {
-    const data = [
-      {
-        "year": "2016",
-        "Iphone": 4000,
-        "Samsung": 2400
-      },
-      {
-        "year": "2017",
-        "Iphone": 3000,
-        "Samsung": 1398
-      },
-      {
-        "year": "2018",
-        "Iphone": 2000,
-        "Samsung": 9800
-      },
-      {
-        "year": "2019",
-        "Iphone": 2780,
-        "Samsung": 3908
-      },
-      {
-        "year": "2020",
-        "Iphone": 1890,
-        "Samsung": 4800
-      },
-      {
-        "year": "2021",
-        "Iphone": 2390,
-        "Samsung": 3800
-      },
-      {
-        "year": "2022",
-        "Iphone": 3490,
-        "Samsung": 4300
-      }
-    ];
-    
+    const { data, error } = useSWR('/data.json', fetcher);
+
+    if (error) return <div>Failed to load data.</div>;
+    if (!data) return <div>Loading...</div>;
+
     return (
         <>
-          <ResponsiveContainer width="100%" height="100%" >
+          <ResponsiveContainer width="100%" height="100%">
             <AreaChart width={730} height={250} data={data}
               margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
               <defs>
@@ -62,7 +33,7 @@ const AreaChartPlot = () => {
             </AreaChart>
           </ResponsiveContainer>
         </>
-      );
-  };
-  export default AreaChartPlot;
+    );
+};
 
+export default AreaChartPlot;
