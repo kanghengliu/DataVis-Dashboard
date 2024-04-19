@@ -1,7 +1,9 @@
 'use client'
 
 import AreaChartPlot from "./AreaChartPlot";
+import CustomAreaChart from "./CusotmAreaPlot";
 import AreaChartHero from "./test";
+
 
 const Charts = () => {
   return (
@@ -56,7 +58,7 @@ const Charts = () => {
             </div>
             
             <div className="w-1/2 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
-              <AreaChartHero />
+              <CustomAreaChart />
             </div>
         </div>
       </section>
