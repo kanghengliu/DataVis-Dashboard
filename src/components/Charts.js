@@ -3,7 +3,7 @@
 import AreaChartPlot from "./AreaChartPlot";
 import CustomAreaChart from "./CusotmAreaPlot";
 import AreaChartHero from "./test";
-
+import ChordDiagram from "././GenreInteractionChart";
 
 const Charts = () => {
   return (
@@ -50,7 +50,7 @@ const Charts = () => {
       <section className="my-4 px-4">
         <div className="flex gap-3 mb-2 justify-center">
             <div className="w-1/2 flex justify-center item-center"> <p className="text-gray-900 font-bold">Titles Released Over Time</p></div>
-            <div className="w-1/2 flex justify-center item-center"> <p className="text-gray-900 font-bold">Revenue Over Time</p></div>
+            <div className="w-1/2 flex justify-center item-center"> <p className="text-gray-900 font-bold">Genre Chord</p></div>
         </div>
         <div className="flex gap-3">
             <div className="w-1/2 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
@@ -58,7 +58,7 @@ const Charts = () => {
             </div>
             
             <div className="w-1/2 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
-              <CustomAreaChart />
+                <ChordDiagram />
             </div>
         </div>
       </section>
