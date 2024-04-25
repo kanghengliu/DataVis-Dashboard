@@ -18,11 +18,11 @@ export default class Example extends PureComponent {
             top: 20,
             right: 30,
             left: 20,
-            bottom: 5,
+            bottom: 20,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="Category" />
+          <XAxis dataKey="Category" minTickGap={5} angle={-45} textAnchor="end" height={60} />
           <YAxis yAxisId="left" orientation="left" stroke="#8884d8" />
           {/* <YAxis yAxisId="right" orientation="right" stroke="#82ca9d" /> */}
           <Tooltip />
