@@ -4,6 +4,7 @@ import AreaChartPlot from "./AreaChartPlot";
 import CustomAreaChart from "./CusotmAreaPlot";
 import AreaChartHero from "./test";
 import ChordDiagram from "././GenreInteractionChart";
+import BarPlot from "./Barplot_GenreSentiment";
 
 const Charts = () => {
   return (
@@ -60,13 +61,14 @@ const Charts = () => {
             <div className="w-1/2 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
               <CustomAreaChart />
             </div>
+            
         </div>
       </section>
 
 
       <section className="flex my-4 px-4 gap-2">
         <div className=" w-1/3 h-[250px] bg-gray-700 rounded"><AreaChartPlot /></div>
-        <div className=" w-1/3 h-[250px] bg-gray-700 rounded"></div>
+        <div className=" w-1/3 h-[250px] bg-gray-700 rounded"><BarPlot /></div>
         <div className=" w-1/3 h-[250px] bg-gray-700 rounded"></div>
       </section>
     </>
