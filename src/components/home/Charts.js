@@ -9,7 +9,7 @@
 
 import MovieNumberPlot from "./MovieNumber";
 import ActorNumberPlot from "./Lineplot_ActorNumber";
-import BarChart from "./GenreViz";
+import GenreRatings from "./GenreViz";
 
 
 
@@ -74,7 +74,7 @@ const Charts = () => {
 
       <section className="flex my-4 px-4 gap-2">
         <div className=" w-1/3 h-[250px] bg-gray-700 rounded"></div>
-        <div className=" w-1/3 h-[250px] bg-gray-700 rounded"><BarChart /> // Use the newly named Plot</div>
+        <div className="w-1/3 h-[540px] bg-gray-700 rounded"><GenreRatings /></div>
         <div className=" w-1/3 h-[250px] bg-gray-700 rounded"></div>
       </section>
     </>
