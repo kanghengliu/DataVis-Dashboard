@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Page from "./logo"
 
 const Sidebar = () => {
     return (
@@ -8,7 +9,11 @@ const Sidebar = () => {
             <ul className="space-y-2">
               <li>
                 <a href="#" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                <Link href="/"><span className="ml-3">Moovies</span></Link>
+                  <Link href="/">
+                    {/* <img src='./logo.png' alt='logo' className='w-8 h-8' /> */}
+                    {/* <image src='./logo.png' alt='logo' /> */}
+                    <Page />
+                  </Link>
                 </a>
               </li>
               <li>
