@@ -1,6 +1,6 @@
 import Sidebar from '../components/Sidebar'
-import Navbar from '../components/Navbar'
-import Charts from '../components/Charts'
+import Navbar from '../components/home/Navbar'
+import Charts from '../components/home/Charts'
 
 export default function Home() {
   return (

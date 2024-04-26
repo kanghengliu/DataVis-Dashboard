@@ -2,13 +2,19 @@ import React, { PureComponent } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import useSWR from 'swr';
 
-const data = require('../../public/sentiment.json');
 
-export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/bar-chart-with-double-yaxis-zr232';
 
-  render() {
-    return (
+// const AreaChartPlot = () => {
+  // const fetcher = url => fetch(url).then(res => res.json());
+  // // const AreaChartPlot = () => {
+  // const { data, error } = useSWR('/sentiment.json', fetcher);
+  
+  
+  const data = require('../../../public/sentiment.json');
+  export default class Example extends PureComponent {
+    
+    render() {
+      return (
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           width={500}

@@ -1,6 +1,6 @@
 import Sidebar from '../../components/Sidebar'
 import Navbar from '../../components/Navbar'
-import Charts from '../../components/Charts'
+import Charts from '../../components/titles/Charts'
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
     <Sidebar/>
     <main className="flex-grow ml-64 relative">
           <Navbar />
+          <Charts />
     </main>
     </div>
     </>
