@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import data from '../../public/genre_data.json';  // Path to JSON file
+import data from '../../../public/genre_data.json';  // Path to JSON file
 
 export default class GenreTrendsChart extends PureComponent {
   render() {
