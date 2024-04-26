@@ -7,7 +7,7 @@ const MoviesMap = ({ tconst }) => {
 
     // Load the locations data
     useEffect(() => {
-        fetch('movie_locations.json')
+        fetch('/data/movie_locations.json')
             .then(res => res.json())
             .then(data => {
                 const filteredData = data.filter(item => item.tconst === tconst);
