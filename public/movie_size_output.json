@@ -1,0 +1,294 @@
+[
+    {
+        "Year": 1951,
+        "Number of Movies": 65
+    },
+    {
+        "Year": 1952,
+        "Number of Movies": 63
+    },
+    {
+        "Year": 1953,
+        "Number of Movies": 67
+    },
+    {
+        "Year": 1954,
+        "Number of Movies": 67
+    },
+    {
+        "Year": 1955,
+        "Number of Movies": 98
+    },
+    {
+        "Year": 1956,
+        "Number of Movies": 78
+    },
+    {
+        "Year": 1957,
+        "Number of Movies": 89
+    },
+    {
+        "Year": 1958,
+        "Number of Movies": 88
+    },
+    {
+        "Year": 1959,
+        "Number of Movies": 104
+    },
+    {
+        "Year": 1960,
+        "Number of Movies": 133
+    },
+    {
+        "Year": 1961,
+        "Number of Movies": 115
+    },
+    {
+        "Year": 1962,
+        "Number of Movies": 114
+    },
+    {
+        "Year": 1963,
+        "Number of Movies": 111
+    },
+    {
+        "Year": 1964,
+        "Number of Movies": 139
+    },
+    {
+        "Year": 1965,
+        "Number of Movies": 114
+    },
+    {
+        "Year": 1966,
+        "Number of Movies": 137
+    },
+    {
+        "Year": 1967,
+        "Number of Movies": 148
+    },
+    {
+        "Year": 1968,
+        "Number of Movies": 150
+    },
+    {
+        "Year": 1969,
+        "Number of Movies": 131
+    },
+    {
+        "Year": 1970,
+        "Number of Movies": 137
+    },
+    {
+        "Year": 1971,
+        "Number of Movies": 152
+    },
+    {
+        "Year": 1972,
+        "Number of Movies": 162
+    },
+    {
+        "Year": 1973,
+        "Number of Movies": 147
+    },
+    {
+        "Year": 1974,
+        "Number of Movies": 164
+    },
+    {
+        "Year": 1975,
+        "Number of Movies": 135
+    },
+    {
+        "Year": 1976,
+        "Number of Movies": 149
+    },
+    {
+        "Year": 1977,
+        "Number of Movies": 142
+    },
+    {
+        "Year": 1978,
+        "Number of Movies": 162
+    },
+    {
+        "Year": 1979,
+        "Number of Movies": 160
+    },
+    {
+        "Year": 1980,
+        "Number of Movies": 192
+    },
+    {
+        "Year": 1981,
+        "Number of Movies": 197
+    },
+    {
+        "Year": 1982,
+        "Number of Movies": 190
+    },
+    {
+        "Year": 1983,
+        "Number of Movies": 202
+    },
+    {
+        "Year": 1984,
+        "Number of Movies": 223
+    },
+    {
+        "Year": 1985,
+        "Number of Movies": 238
+    },
+    {
+        "Year": 1986,
+        "Number of Movies": 248
+    },
+    {
+        "Year": 1987,
+        "Number of Movies": 286
+    },
+    {
+        "Year": 1988,
+        "Number of Movies": 310
+    },
+    {
+        "Year": 1989,
+        "Number of Movies": 308
+    },
+    {
+        "Year": 1990,
+        "Number of Movies": 345
+    },
+    {
+        "Year": 1991,
+        "Number of Movies": 375
+    },
+    {
+        "Year": 1992,
+        "Number of Movies": 394
+    },
+    {
+        "Year": 1993,
+        "Number of Movies": 427
+    },
+    {
+        "Year": 1994,
+        "Number of Movies": 441
+    },
+    {
+        "Year": 1995,
+        "Number of Movies": 458
+    },
+    {
+        "Year": 1996,
+        "Number of Movies": 489
+    },
+    {
+        "Year": 1997,
+        "Number of Movies": 543
+    },
+    {
+        "Year": 1998,
+        "Number of Movies": 579
+    },
+    {
+        "Year": 1999,
+        "Number of Movies": 650
+    },
+    {
+        "Year": 2000,
+        "Number of Movies": 628
+    },
+    {
+        "Year": 2001,
+        "Number of Movies": 666
+    },
+    {
+        "Year": 2002,
+        "Number of Movies": 713
+    },
+    {
+        "Year": 2003,
+        "Number of Movies": 671
+    },
+    {
+        "Year": 2004,
+        "Number of Movies": 769
+    },
+    {
+        "Year": 2005,
+        "Number of Movies": 940
+    },
+    {
+        "Year": 2006,
+        "Number of Movies": 1118
+    },
+    {
+        "Year": 2007,
+        "Number of Movies": 1100
+    },
+    {
+        "Year": 2008,
+        "Number of Movies": 1173
+    },
+    {
+        "Year": 2009,
+        "Number of Movies": 1252
+    },
+    {
+        "Year": 2010,
+        "Number of Movies": 1310
+    },
+    {
+        "Year": 2011,
+        "Number of Movies": 1422
+    },
+    {
+        "Year": 2012,
+        "Number of Movies": 1403
+    },
+    {
+        "Year": 2013,
+        "Number of Movies": 1619
+    },
+    {
+        "Year": 2014,
+        "Number of Movies": 1683
+    },
+    {
+        "Year": 2015,
+        "Number of Movies": 1818
+    },
+    {
+        "Year": 2016,
+        "Number of Movies": 1856
+    },
+    {
+        "Year": 2017,
+        "Number of Movies": 2016
+    },
+    {
+        "Year": 2018,
+        "Number of Movies": 1883
+    },
+    {
+        "Year": 2019,
+        "Number of Movies": 2014
+    },
+    {
+        "Year": 2020,
+        "Number of Movies": 1706
+    },
+    {
+        "Year": 2021,
+        "Number of Movies": 1789
+    },
+    {
+        "Year": 2022,
+        "Number of Movies": 1835
+    },
+    {
+        "Year": 2023,
+        "Number of Movies": 1500
+    }
+]
