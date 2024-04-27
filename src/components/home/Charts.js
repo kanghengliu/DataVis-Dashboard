@@ -10,6 +10,7 @@
 import MovieNumberPlot from "./MovieNumber";
 import ActorNumberPlot from "./Lineplot_ActorNumber";
 import GenreRatings from "./GenreViz";
+import StreamgraphRatings from "./streamgraph_ratings";
 
 
 
@@ -57,23 +58,23 @@ const Charts = () => {
 
       <section className="my-4 px-4">
         <div className="flex gap-3 mb-2 justify-center">
-            <div className="w-1/2 flex justify-center item-center"> <p className="text-gray-900 font-bold">Titles Released Over Time</p></div>
-            <div className="w-1/2 flex justify-center item-center"> <p className="text-gray-900 font-bold">Unique Active Actors Over Time</p></div>
+            <div className="w-2/3 flex justify-center item-center"> <p className="text-gray-900 font-bold">Titles Released Over Time</p></div>
+            <div className="w-1/3 flex justify-center item-center"> <p className="text-gray-900 font-bold">Average Rating Distribution</p></div>
         </div>
         <div className="flex gap-3">
-            <div className="w-1/2 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
+            <div className="w-2/3 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
               <MovieNumberPlot />
             </div>
             
-            <div className="w-1/2 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
-              <ActorNumberPlot />
+            <div className="w-1/1 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
+              <StreamgraphRatings />
             </div>
 
         </div>
       </section>
 
       <section className="flex my-4 px-4 gap-2">
-        <div className=" w-1/3 h-[250px] bg-gray-700 rounded"></div>
+        <div className=" w-1/3 h-[250px] bg-gray-700 rounded"><ActorNumberPlot /></div>
         <div className="w-1/3 h-[540px] bg-gray-700 rounded"><GenreRatings /></div>
         <div className=" w-1/3 h-[250px] bg-gray-700 rounded"></div>
       </section>
