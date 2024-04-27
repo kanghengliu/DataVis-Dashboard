@@ -13,9 +13,6 @@ const AreaChartPlot = () => {
 
     return (
         <>
-          <div style={{ width: '100%', height: 'auto', textAlign: 'center', marginBottom: '-5px' }}>
-            <h2>Genre Average Rating Over Years</h2>
-          </div>
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart width={500} height={300} data={data}
               margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>

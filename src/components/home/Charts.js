@@ -21,36 +21,36 @@ const Charts = () => {
       <section className="my-4 px-4">
         <div className="flex gap-7 my-4 px-4 mb-2 justify-center">
             <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Total Movies</p></div>
-            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Box Office</p></div>
-            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Total Locations</p></div>
-            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Total Scripts</p></div>
+            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Box Office & Budget</p></div>
+            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Filming Locations</p></div>
+            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Movie Scripts</p></div>
         </div>
         <div className="flex m-4 gap-7">
           <div className="flex-1 px-2 justify-center w-16 bg-gray-700 shadow rounded h-300px">
             <div className="p-3 flex justify-center item-center">
               {/* <p className="text-gray-900 font-bold">Total returns</p> */}
-              <p className="py-4 font-bold">44,860</p>
+              <p className="py-4 font-bold">44,860 initial movies</p>
               {/* <p className="text-green-300">+34.5%</p> */}
             </div>
           </div>
           <div className="flex-1 px-2 justify-center w-16 bg-gray-700 shadow rounded max-h-300px">
             <div className="p-3 flex justify-center item-center">
               {/* <p className="text-gray-900 font-bold">Total sales</p> */}
-              <p className="py-4 font-bold">8,845</p>
+              <p className="py-4 font-bold">8,845 movies scraped</p>
               {/* <p className="text-green-300">+34.5%</p> */}
             </div>
           </div>
           <div className="flex-1 px-2 justify-center w-16  bg-gray-700 shadow rounded max-h-300px">
             <div className="p-3 flex justify-center item-center">
               {/* <p className="text-gray-900 font-bold">Total subscriptions</p> */}
-              <p className="py-4 font-bold">2,500</p>
+              <p className="py-4 font-bold">2,500 movies scraped</p>
               {/* <p className="text-green-300">+34.5%</p> */}
             </div>
           </div>
           <div className="flex-1 px-2 justify-center w-16  bg-gray-700 shadow rounded h-300px">
             <div className="p-3 flex justify-center item-center">
               {/* <p className="text-gray-900 font-bold">Total returns</p> */}
-              <p className="py-4 font-bold ">460</p>
+              <p className="py-4 font-bold ">460 movies scraped</p>
               {/* <p className="text-green-300">+34.5%</p> */}
             </div>
           </div>
@@ -64,11 +64,11 @@ const Charts = () => {
         </div>
         <div className="flex gap-3">
 
-            <div className="w-1/2 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
+            <div className="w-2/3 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
               <DoubleAxis />
             </div>
 
-            <div className="w-1/1 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
+            <div className="w-1/3 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
               <StreamgraphRatings />
             </div>
 
@@ -77,7 +77,7 @@ const Charts = () => {
 
       <section className="flex my-4 px-4 gap-2">
         <div className=" w-1/3 h-[250px] bg-gray-700 rounded"></div>
-        <div className="w-1/3 h-[540px] bg-gray-700 rounded"></div>
+        <div className="w-1/3 h-[250px] bg-gray-700 rounded"></div>
 
         <div className=" w-1/3 h-[250px] bg-gray-700 rounded"></div>
       </section>
