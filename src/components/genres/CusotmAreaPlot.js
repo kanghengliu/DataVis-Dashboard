@@ -14,7 +14,7 @@ import useSWR from "swr";
 const fetcher = url => fetch(url).then(res => res.json());
 
 const CustomAreaChart = () => {
-  const { data, error } = useSWR('/genre_data.json', fetcher);
+  const { data, error } = useSWR('/data/genre_data.json', fetcher);
 
   const [activeKey, setActiveKey] = useState(null); // Null when no line is hovered
     if (error) return <div>Failed to load data.</div>;
