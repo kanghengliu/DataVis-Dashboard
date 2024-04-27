@@ -6,6 +6,7 @@ import AreaChartHero from "./test";
 import ChordDiagram from "./GenreInteractionChart";
 import BarPlot from "./Barplot_GenreSentiment";
 import Streamgraph from "./streamgraph";
+import AverageRating from "./AverageRating";
 // import NewBarPlot from "./GenreViz";
 
 const Charts = () => {
@@ -71,6 +72,7 @@ const Charts = () => {
         <div className=" w-1/3 h-[250px] bg-gray-700 rounded"><Streamgraph /></div>
         {/* <div className=" w-1/3 h-[250px] bg-gray-700 rounded"><NewBarPlot /> // Use the newly named BarPlot</div> */}
         <div className=" w-1/3 h-[250px] bg-gray-700 rounded"><ChordDiagram /></div>
+        <div className=" w-1/3 h-[250px] bg-gray-700 rounded"><AverageRating /></div>
       </section>
     </>
   );
