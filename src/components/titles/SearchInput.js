@@ -10,7 +10,6 @@ const SearchInput = ({ onSelectMovie }) => {
   const { data, error } = useSWR('/data/titleid.json', fetcher);
   const [suggestions, setSuggestions] = useState([]);
 
-  // Configure Fuse.js for fuzzy searching
   const options = {
     includeScore: true,
     keys: ['title']
@@ -19,7 +18,7 @@ const SearchInput = ({ onSelectMovie }) => {
 
   const handleInputChange = (event) => {
     setInputTitle(event.target.value);
-    if (data && event.target.value.length > 2) {
+    if (data && typeof data === 'object' && event.target.value.length > 2) {
       if (!fuse) {
         fuse = new Fuse(Object.entries(data).map(([tconst, title]) => ({ tconst, title })), options);
       }
@@ -31,10 +30,9 @@ const SearchInput = ({ onSelectMovie }) => {
   };
 
   const handleClickSuggestion = (tconst, title) => {
-    // Call onSelectMovie or set state here to pass the tconst and title
     onSelectMovie(tconst, title);
-    setInputTitle(title); // Optionally update the input field with the selected title
-    setSuggestions([]); // Clear suggestions after selection
+    setInputTitle(title);
+    setSuggestions([]);
   };
 
   if (error) return <div>Failed to load data.</div>;

@@ -2,34 +2,15 @@
 
 import React from 'react';
 import MoviesMap from './map';
-import modifyTconst from './titlesid';
-
-// async function getTitleTconsts() {
-//   const title = 'Halloween'; // Example title
-//   try {
-//     const tconsts = await modifyTconst(title);
-//     console.log(`The tconst for "${title}" is ${tconsts}.`);
-//     console.log("tconsts loaded", tconsts);
-//     const tconst = tconsts[0];
-//     return tconst;
-//   } catch (error) {
-//     console.error('Failed to get tconsts:', error);
-//   }
-// }
 
 
-const Charts = () => {
-// getTitleTconsts();
-const title = 'Inception'; // Example title
-const tconsts = modifyTconst(title);
-const tconst = tconsts[0];
-// console.log("ID: ", tconst);
+const Charts = ({ tconst, title }) => {
   return (
     <>
       <section className="my-4 px-4">
         <div className="flex gap-3 mb-2 justify-center">
           <div className="w-1/2 flex justify-center item-center">
-            <p className="text-gray-900 font-bold">Now Watching... {title}: {tconst}</p>
+            <p className="text-gray-900 font-bold">Now Watching...  {title}</p>
           </div>
         </div>
         <div className="flex gap-3">
