@@ -2,7 +2,7 @@
 
 import React from 'react';
 import MoviesMap from './map';
-
+import CastList from './cast';
 
 const Charts = ({ tconst, title }) => {
   return (
@@ -25,7 +25,13 @@ const Charts = ({ tconst, title }) => {
       </section>
 
       <section className="flex my-4 px-4 gap-2">
-        <div className="w-1/3 h-[250px] bg-gray-700 rounded"></div>
+        <div className="w-1/3 h-[250px] bg-gray-700 rounded justify-center p-4">
+          {/* Cast Members: */}
+          <div className='flex justify-center items-center'><h3 className="text-white font-bold">Cast & Crew</h3></div>
+          <div className='flex justify-center items-center p-2'>
+          <CastList tconst={tconst} />
+          </div> 
+        </div>
         <div className="w-1/3 h-[250px] bg-gray-700 rounded"></div>
         <div className="w-1/3 h-[250px] bg-gray-700 rounded"></div>
       </section>
