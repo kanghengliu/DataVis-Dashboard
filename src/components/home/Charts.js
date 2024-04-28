@@ -75,11 +75,22 @@ const Charts = () => {
         </div>
       </section>
 
-      <section className="flex my-4 px-4 gap-2">
-        <div className=" w-1/3 h-[250px] bg-gray-700 rounded"></div>
-        <div className="w-1/3 h-[250px] bg-gray-700 rounded"></div>
+      <section className="my-4 px-4">
+        <div className="flex gap-3 mb-2 justify-center">
+            <div className="w-1/2 flex justify-center item-center"> <p className="text-gray-900 font-bold">Filter for cast</p></div>
+            <div className="w-1/2 flex justify-center item-center"> <p className="text-gray-900 font-bold">Another plot</p></div>
+        </div>
+        <div className="flex gap-3">
 
-        <div className=" w-1/3 h-[250px] bg-gray-700 rounded"></div>
+            <div className="w-1/2 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
+              {/* < /> */}
+            </div>
+
+            <div className="w-1/2 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
+              {/* < /> */}
+            </div>
+
+        </div>
       </section>
     </>
   );

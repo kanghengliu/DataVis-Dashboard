@@ -5,6 +5,8 @@ function Streamgraph() {
   const ref = useRef();
   const tooltipRef = useRef();
   const dataPath = '/data/genre_avg_rating.json'; // Path to JSON file
+  const customColors = ['#9e0142', '#d53e4f', '#f46d43', '#fdae61', '#fee08b', 
+                        '#e6f598', '#abdda4', '#66c2a5', '#3288bd', '#5e4fa2'];
 
   useEffect(() => {
     const tooltip = d3.select(tooltipRef.current);
@@ -45,7 +47,7 @@ function Streamgraph() {
           .domain([1, 10])
           .range([height, 0]);
 
-        const color = d3.scaleOrdinal(d3.schemeCategory10);
+        const color = d3.scaleOrdinal(customColors); // Use custom color array
 
         const area = d3.area()
           .x(d => x(d[0]))
@@ -106,4 +108,3 @@ function Streamgraph() {
 }
 
 export default Streamgraph;
-
