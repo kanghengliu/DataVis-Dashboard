@@ -20,10 +20,10 @@ const Charts = () => {
     <>
       <section className="my-4 px-4">
         <div className="flex gap-7 my-4 px-4 mb-2 justify-center">
-            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Total Movies</p></div>
-            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Box Office & Budget</p></div>
-            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Filming Locations</p></div>
-            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Movie Scripts</p></div>
+            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Total Movies(IMDB Dataset)</p></div>
+            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Box Office(Scraped from IMDB)</p></div>
+            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Total Locations(Scraped from IMDB)</p></div>
+            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Total Scripts</p></div>
         </div>
         <div className="flex m-4 gap-7">
           <div className="flex-1 px-2 justify-center w-16 bg-gray-700 shadow rounded h-300px">
