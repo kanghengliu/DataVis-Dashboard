@@ -8,12 +8,12 @@ const Sidebar = () => {
           <div className="overflow-y-auto py-5 px-3 h-fit flex-col bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
             <ul className="space-y-2">
               <li>
-                <a href="#" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                  <Link href="/">
+                <a href="/" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                  {/* <Link href="/"> */}
                     {/* <img src='./logo.png' alt='logo' className='w-8 h-8' /> */}
                     {/* <image src='./logo.png' alt='logo' /> */}
                     <Page />
-                  </Link>
+                  {/* </Link> */}
                 </a>
               </li>
               <li>

@@ -17,25 +17,26 @@ const Charts = ({ tconst, title }) => {
           </div>
         </div>
         <div className="flex gap-3">
-          <div className="w-3/4 h-[600px] bg-gray-700 rounded flex justify-center items-center p-2">
+          <div className="w-3/4 h-[600px] bg-gray-700 rounded flex backdrop-blur-xxl bg-white/50 justify-center items-center p-2">
             <MoviesMap tconst={tconst} />
           </div>
-          <div className="w-1/4 h-[600px] bg-gray-700 rounded flex justify-center items-center p-2">
-            < FinancialInfo tconst={tconst} />
+          <div className="w-1/4 h-[600px] bg-gray-700 rounded flex
+          backdrop-blur-xxl bg-white/50 justify-center items-center p-2">
+            <FinancialInfo tconst={tconst} />
           </div>
         </div>
       </section>
 
       <section className="flex my-4 px-4 gap-2">
-        <div className="w-1/3 h-[250px] bg-gray-700 rounded"><MoviesOverTime tconst={tconst}/></div>
-        <div className="w-1/3 h-[250px] bg-gray-700 rounded justify-center p-4">
+        <div className="w-1/3 h-[250px] bg-gray-700 rounded backdrop-blur-xxl bg-white/50 justify-center items-center"><MoviesOverTime tconst={tconst}/></div>
+        <div className="w-1/3 h-[250px] bg-gray-700 rounded backdrop-blur-xxl bg-white/50 justify-center p-4">
           {/* Cast Members: */}
-          <div className='flex justify-center items-center'><h3 className="text-white font-bold">Cast & Crew</h3></div>
+          <div className='flex justify-center items-center'><h3 className="font-bold text-gray-800">Cast & Crew</h3></div>
           <div className='flex justify-center items-center p-2'>
           <CastList tconst={tconst} />
           </div> 
         </div>
-        <div className="w-1/3 h-[250px] bg-gray-700 rounded"><Ratings tconst={tconst}/></div>
+        <div className="w-1/3 h-[250px] bg-gray-700 rounded backdrop-blur-xxl bg-white/50 justify-center items-center"><Ratings tconst={tconst}/></div>
       </section>
     </>
   );
