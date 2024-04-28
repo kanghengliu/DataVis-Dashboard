@@ -15,8 +15,8 @@ const Charts = () => {
 
       <section className="my-4 px-4">
         <div className="flex gap-3 mb-2 justify-center">
-            <div className="w-1/2 flex justify-center item-center"> <p className="text-gray-900 font-bold">Titles Released Over Time</p></div>
-            <div className="w-1/2 flex justify-center item-center"> <p className="text-gray-900 font-bold">Genre Chord</p></div>
+            <div className="w-1/2 flex justify-center item-center"> <p className="text-gray-900 font-bold">Genre Sentiment</p></div>
+            <div className="w-1/2 flex justify-center item-center"> <p className="text-gray-900 font-bold">Box Office Performance over Time</p></div>
         </div>
         <div className="flex gap-3">
             <div className="w-1/2 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
@@ -69,14 +69,26 @@ const Charts = () => {
         </div>
       </section>
 
+      <section className="my-4 px-4">
+        <div className="flex gap-3 mb-2 justify-center">
+            <div className="w-1/2 flex justify-center item-center"> <p className="text-gray-900 font-bold">Number of Movies over Time</p></div>
+            <div className="w-1/2 flex justify-center item-center"> <p className="text-gray-900 font-bold">Genre Chord</p></div>
+            <div className="w-1/2 flex justify-center item-center"> <p className="text-gray-900 font-bold">Average Rating over Time</p></div>
+        </div>
+        <div className="flex gap-3">
+            <div className="w-1/3 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
+              <Streamgraph />
+            </div>
+            
+            <div className="w-1/3 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
+              <ChordDiagram />
+            </div>
 
+            <div className="w-1/3 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
+              <AverageRating />
+            </div>
 
-      <section className="flex my-4 px-4 gap-2">
-        <div className=" w-1/3 h-[250px] bg-gray-700 rounded"><Streamgraph /></div>
-        {/* <div className=" w-1/3 h-[250px] bg-gray-700 rounded"><NewBarPlot /> // Use the newly named BarPlot</div> */}
-        {/* <div className=" w-1/3 h-[250px] bg-gray-700 rounded"><AreaChartPlot /></div> */}
-        <div className=" w-1/3 h-[250px] bg-gray-700 rounded"><ChordDiagram /></div>
-        <div className=" w-1/3 h-[250px] bg-gray-700 rounded"><AverageRating /></div>
+        </div>
       </section>
     </>
   );

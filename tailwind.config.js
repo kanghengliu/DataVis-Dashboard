@@ -15,4 +15,9 @@ module.exports = {
     },
   },
   plugins: [],
+  extend: {
+    variants: {
+      overflow: ['hover']
+    }
+  }
 };
