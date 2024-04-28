@@ -23,12 +23,13 @@ const FinancialInfo = ({ tconst }) => {
   if (!data) return <div>Loading info...</div>;
 
   return (
-    <div className="bg-gray-700 p-4 rounded text-white flex flex-col items-center justify-center text-xl">
-      <div>
-        Total Budget: <span className="block text-3xl" style={{ color: '#F1AFE1' }}>${financials.totalBudget.toLocaleString()}</span>
+    <div className="bg-gray-700 p-4 rounded text-white flex flex-col items-center justify-center text-2xl font-bold">
+      <div style={{ textAlign: 'center', fontSize: '24px' }}>
+        Total Budget: <span style={{ display: 'block', fontSize: '36px', color: '#F1AFE1' }}>${financials.totalBudget.toLocaleString()}</span>
       </div>
-      <div>
-        Total Revenue: <span className="block text-3xl" style={{ color: '#F1AFE1' }}>${financials.totalBoxOffice.toLocaleString()}</span>
+      <div style={{ height: '50px' }}></div> {/* Spacer div */}
+      <div style={{ textAlign: 'center', fontSize: '24px' }}>
+        Total Revenue: <span style={{ display: 'block', fontSize: '36px', color: '#F1AFE1' }}>${financials.totalBoxOffice.toLocaleString()}</span>
       </div>
     </div>
   );
