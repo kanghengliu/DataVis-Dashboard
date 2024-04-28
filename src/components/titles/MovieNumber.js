@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import useSWR from 'swr';
-import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, Label } from 'recharts';
-
+import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, Label, ReferenceLine } from 'recharts';
 
 const fetcher = url => fetch(url).then(res => res.json());
 
-const AreaChartPlot = () => {
+const AreaChartPlot = ({ tconst }) => {
     const { data, error } = useSWR('/movie_size_output.json', fetcher);
+    const [movieYear, setYear] = useState(null);
+
+    useEffect(() => {
+        fetch('/data/release_years.json')
+            .then(res => res.json())
+            .then(data => {
+                const movie = data.find(m => m.tconst === tconst);
+                if (movie) {
+                    setYear(movie.Year);
+                }
+            });
+    }, [tconst]);
 
     if (error) return <div>Failed to load data.</div>;
     if (!data) return <div>Loading...</div>;
@@ -23,13 +34,17 @@ const AreaChartPlot = () => {
                 </linearGradient>
               </defs>
               <XAxis dataKey="Year">
-                <Label value="Year" offset={1} position="bottom" />
+                <Label value="Year" offset={0} position="bottom" />
               </XAxis>
               <YAxis>
                 <Label value="Number of Movies" offset={0} position="insideLeft" angle={-90} style={{ textAnchor: 'middle' }} />
               </YAxis>
               <Tooltip />
-              <Area type="monotone" dataKey="Number of Movies" stroke="#F1AFE1" fillOpacity={1} fill="url(#colorUv)" />            </AreaChart>
+              <Area type="monotone" dataKey="Number of Movies" stroke="#F1AFE1" fillOpacity={1} fill="url(#colorUv)" />
+              {movieYear && (
+                  <ReferenceLine x={movieYear} stroke="red" label={{ value: `Year: ${movieYear}`, position: 'top' }} />
+              )}
+            </AreaChart>
           </ResponsiveContainer>
         </>
     );

@@ -27,7 +27,7 @@ const Charts = ({ tconst, title }) => {
       </section>
 
       <section className="flex my-4 px-4 gap-2">
-        <div className="w-1/3 h-[250px] bg-gray-700 rounded"><MoviesOverTime /></div>
+        <div className="w-1/3 h-[250px] bg-gray-700 rounded"><MoviesOverTime tconst={tconst}/></div>
         <div className="w-1/3 h-[250px] bg-gray-700 rounded justify-center p-4">
           {/* Cast Members: */}
           <div className='flex justify-center items-center'><h3 className="text-white font-bold">Cast & Crew</h3></div>
@@ -35,7 +35,7 @@ const Charts = ({ tconst, title }) => {
           <CastList tconst={tconst} />
           </div> 
         </div>
-        <div className="w-1/3 h-[250px] bg-gray-700 rounded"><Ratings /></div>
+        <div className="w-1/3 h-[250px] bg-gray-700 rounded"><Ratings tconst={tconst}/></div>
       </section>
     </>
   );
