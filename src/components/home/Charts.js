@@ -20,9 +20,9 @@ const Charts = () => {
     <>
       <section className="my-4 px-4">
         <div className="flex gap-7 my-4 px-4 mb-2 justify-center">
-            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Total Movies</p></div>
-            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Box Office</p></div>
-            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Total Locations</p></div>
+            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Total Movies(IMDB Dataset)</p></div>
+            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Box Office(Scraped from IMDB)</p></div>
+            <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Total Locations(Scraped from IMDB)</p></div>
             <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Total Scripts</p></div>
         </div>
         <div className="flex m-4 gap-7">
@@ -64,11 +64,11 @@ const Charts = () => {
         </div>
         <div className="flex gap-3">
 
-            <div className="w-1/2 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
+            <div className="w-2/3 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
               <DoubleAxis />
             </div>
 
-            <div className="w-1/1 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
+            <div className="w-1/3 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
               <StreamgraphRatings />
             </div>
 
