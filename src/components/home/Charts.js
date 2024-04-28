@@ -26,31 +26,31 @@ const Charts = () => {
             <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Total Scripts</p></div>
         </div>
         <div className="flex m-4 gap-7">
-          <div className="flex-1 px-2 justify-center w-16 bg-gray-700 shadow rounded h-300px">
+          <div className="flex-1 px-2 justify-center w-16 backdrop-blur-xxl bg-white/50 shadow rounded h-300px">
             <div className="p-3 flex justify-center item-center">
               {/* <p className="text-gray-900 font-bold">Total returns</p> */}
-              <p className="py-4 font-bold">44,860 initial movies</p>
+              <p className="py-4 text-gray-900 font-bold">44,860 initial movies</p>
               {/* <p className="text-green-300">+34.5%</p> */}
             </div>
           </div>
-          <div className="flex-1 px-2 justify-center w-16 bg-gray-700 shadow rounded max-h-300px">
+          <div className="flex-1 px-2 justify-center w-16 backdrop-blur-xxl bg-white/50 shadow rounded max-h-300px">
             <div className="p-3 flex justify-center item-center">
               {/* <p className="text-gray-900 font-bold">Total sales</p> */}
-              <p className="py-4 font-bold">8,845 movies scraped</p>
+              <p className="py-4 text-gray-900 font-bold">8,845 movies scraped</p>
               {/* <p className="text-green-300">+34.5%</p> */}
             </div>
           </div>
-          <div className="flex-1 px-2 justify-center w-16  bg-gray-700 shadow rounded max-h-300px">
+          <div className="flex-1 px-2 justify-center w-16 backdrop-blur-3xl bg-white/50 shadow rounded max-h-300px">
             <div className="p-3 flex justify-center item-center">
               {/* <p className="text-gray-900 font-bold">Total subscriptions</p> */}
-              <p className="py-4 font-bold">2,500 movies scraped</p>
+              <p className="py-4 text-gray-900 font-bold">2,500 movies scraped</p>
               {/* <p className="text-green-300">+34.5%</p> */}
             </div>
           </div>
-          <div className="flex-1 px-2 justify-center w-16  bg-gray-700 shadow rounded h-300px">
+          <div className="flex-1 px-2 justify-center w-16  backdrop-blur-xxl bg-white/50 shadow rounded h-300px">
             <div className="p-3 flex justify-center item-center">
               {/* <p className="text-gray-900 font-bold">Total returns</p> */}
-              <p className="py-4 font-bold ">460 movies scraped</p>
+              <p className="py-4 text-gray-900 font-bold">460 movies scraped</p>
               {/* <p className="text-green-300">+34.5%</p> */}
             </div>
           </div>
@@ -64,11 +64,11 @@ const Charts = () => {
         </div>
         <div className="flex gap-3">
 
-            <div className="w-2/3 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
+            <div className="w-2/3 h-[300px] bg-gray-700 rounded flex backdrop-blur-xxl bg-white/50 justify-center items-center p-2">
               <DoubleAxis />
             </div>
 
-            <div className="w-1/3 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
+            <div className="w-1/3 h-[300px] bg-gray-700 rounded flex backdrop-blur-xxl bg-white/50 justify-center items-center p-2">
               <StreamgraphRatings />
             </div>
 
@@ -82,11 +82,11 @@ const Charts = () => {
         </div>
         <div className="flex gap-3">
 
-            <div className="w-1/2 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
+            <div className="w-1/2 h-[300px] bg-gray-700 rounded flex backdrop-blur-xxl bg-white/50 justify-center items-center p-2">
               {/* < /> */}
             </div>
 
-            <div className="w-1/2 h-[300px] bg-gray-700 rounded flex justify-center items-center p-2">
+            <div className="w-1/2 h-[300px] bg-gray-700 rounded flex backdrop-blur-xxl bg-white/50 justify-center items-center p-2">
               {/* < /> */}
             </div>
 
