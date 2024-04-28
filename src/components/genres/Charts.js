@@ -19,11 +19,11 @@ const Charts = () => {
             <div className="w-1/2 flex justify-center item-center"> <p className="text-gray-900 font-bold">Box Office Performance over Time</p></div>
         </div>
         <div className="flex gap-3">
-            <div className="w-1/2 h-[300px] bg-gray-700 rounded flex backdrop-blur-xxl bg-white/50 justify-center items-center p-2">
+            <div className="w-1/2 h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
               <BarPlot />
             </div>
             
-            <div className="w-1/2 h-[300px] bg-gray-700 rounded flex backdrop-blur-xxl bg-white/50 justify-center items-center p-2">
+            <div className="w-1/2 h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
               <CustomAreaChart />
             </div>
 
@@ -38,28 +38,28 @@ const Charts = () => {
             <div className="w-1/4 flex justify-center items-center"><p className="text-gray-900 font-bold">Longest Runtime(2023)</p></div>
         </div>
         <div className="flex m-4 gap-7">
-          <div className="flex-1 px-2 backdrop-blur-xxl bg-white/50 justify-center w-16 bg-gray-700 shadow rounded h-300px">
+          <div className="flex-1 px-2 backdrop-blur-2xl bg-white/50 justify-center w-16 bg-gray-700 shadow rounded h-300px">
             <div className="p-3 flex justify-center item-center">
               {/* <p className="text-gray-900 font-bold">Total returns</p> */}
               <p className="py-4 font-bold text-gray-900">Animation : $929M</p>
               {/* <p className="text-green-300">+34.5%</p> */}
             </div>
           </div>
-          <div className="flex-1 px-2 backdrop-blur-xxl bg-white/50 justify-center w-16 bg-gray-700 shadow rounded max-h-300px">
+          <div className="flex-1 px-2 backdrop-blur-2xl bg-white/50 justify-center w-16 bg-gray-700 shadow rounded max-h-300px">
             <div className="p-3 flex justify-center item-center">
               {/* <p className="text-gray-900 font-bold">Total sales</p> */}
               <p className="py-4 font-bold text-gray-900">Biography : 9.32</p>
               {/* <p className="text-green-300">+34.5%</p> */}
             </div>
           </div>
-          <div className="flex-1 px-2 backdrop-blur-xxl bg-white/50 justify-center w-16  bg-gray-700 shadow rounded max-h-300px">
+          <div className="flex-1 px-2 backdrop-blur-2xl bg-white/50 justify-center w-16  bg-gray-700 shadow rounded max-h-300px">
             <div className="p-3 flex justify-center item-center">
               {/* <p className="text-gray-900 font-bold">Total subscriptions</p> */}
               <p className="py-4 font-bold text-gray-900">Drama : 362 </p>
               {/* <p className="text-green-300">+34.5%</p> */}
             </div>
           </div>
-          <div className="flex-1 px-2 backdrop-blur-xxl bg-white/50 justify-center w-16  bg-gray-700 shadow rounded h-300px">
+          <div className="flex-1 px-2 backdrop-blur-2xl bg-white/50 justify-center w-16  bg-gray-700 shadow rounded h-300px">
             <div className="p-3 flex justify-center item-center">
               {/* <p className="text-gray-900 font-bold">Total returns</p> */}
               <p className="py-4 font-bold text-gray-900">Musical : 135 minutes </p>
@@ -76,15 +76,15 @@ const Charts = () => {
             <div className="w-1/2 flex justify-center item-center"> <p className="text-gray-900 font-bold">Average Rating over Time</p></div>
         </div>
         <div className="flex gap-3">
-            <div className="w-1/3 h-[300px] bg-gray-700 rounded flex backdrop-blur-xxl bg-white/50 justify-center items-center p-2">
+            <div className="w-1/3 h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
               <Streamgraph />
             </div>
             
-            <div className="w-1/3 h-[300px] bg-gray-700 rounded flex backdrop-blur-xxl bg-white/50 justify-center items-center p-2">
+            <div className="w-1/3 h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
               <ChordDiagram />
             </div>
 
-            <div className="w-1/3 h-[300px] bg-gray-700 rounded flex backdrop-blur-xxl bg-white/50 justify-center items-center p-2">
+            <div className="w-1/3 h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
               <AverageRating />
             </div>
 
