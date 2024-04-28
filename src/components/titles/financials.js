@@ -25,11 +25,11 @@ const FinancialInfo = ({ tconst }) => {
   return (
     <div className="rounded text-gray-800 flex flex-col items-center justify-center text-3xl font-bold">
       <div style={{ textAlign: 'center', fontSize: '24px' }}>
-        Total Budget: <span style={{ display: 'block', fontSize: '36px', color: '#F1AFE1' }}>${financials.totalBudget.toLocaleString()}</span>
+        Total Budget: <span style={{ display: 'block', fontSize: '36px', color: '#E34546' }}>${financials.totalBudget.toLocaleString()}</span>
       </div>
       <div style={{ height: '50px' }}></div> {/* Spacer div */}
       <div style={{ textAlign: 'center', fontSize: '24px' }}>
-        Total Revenue: <span style={{ display: 'block', fontSize: '36px', color: '#F1AFE1' }}>${financials.totalBoxOffice.toLocaleString()}</span>
+        Total Revenue: <span style={{ display: 'block', fontSize: '36px', color: '#E34546' }}>${financials.totalBoxOffice.toLocaleString()}</span>
       </div>
     </div>
   );
