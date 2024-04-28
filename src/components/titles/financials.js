@@ -23,7 +23,7 @@ const FinancialInfo = ({ tconst }) => {
   if (!data) return <div>Loading info...</div>;
 
   return (
-    <div className="bg-gray-700 p-4 rounded text-white flex flex-col items-center justify-center text-2xl font-bold">
+    <div className="rounded text-gray-800 flex flex-col items-center justify-center text-3xl font-bold">
       <div style={{ textAlign: 'center', fontSize: '24px' }}>
         Total Budget: <span style={{ display: 'block', fontSize: '36px', color: '#F1AFE1' }}>${financials.totalBudget.toLocaleString()}</span>
       </div>
