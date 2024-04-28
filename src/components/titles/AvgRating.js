@@ -29,8 +29,8 @@ const AreaChartPlot = ({ tconst }) => {
               margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
               <defs>
                 <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#F1AFE1" stopOpacity={0.8} />
-                  <stop offset="95%" stopColor="#F1AFE1" stopOpacity={0} />
+                  <stop offset="5%" stopColor="#E34546" stopOpacity={0.8} />
+                  <stop offset="95%" stopColor="#E34546" stopOpacity={0} />
                 </linearGradient>
               </defs>
               <XAxis dataKey="Rating">
@@ -40,7 +40,7 @@ const AreaChartPlot = ({ tconst }) => {
                 <Label value="Number of Movies" offset={0} position="insideLeft" angle={-90} style={{ textAnchor: 'middle' }} />
               </YAxis>
               <Tooltip />
-              <Area type="monotone" dataKey="Number of Movies" stroke="#F1AFE1" fillOpacity={1} fill="url(#colorUv)" />
+              <Area type="monotone" dataKey="Number of Movies" stroke="#E34546" fillOpacity={1} fill="url(#colorUv)" />
               {movieRating && (
                   <ReferenceLine x={movieRating} stroke="red" label={{ value: `Rating: ${movieRating}`, position: 'top' }} />
               )}
