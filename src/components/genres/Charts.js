@@ -46,7 +46,7 @@ const Charts = () => {
         </div>
         <div className="flex m-4 gap-7">
           <div className="w-1/4">
-          <TooltipDiv tooltipText="TOOLTIPS">
+          <TooltipDiv tooltipText={<><span>Animation : $929.24M</span><br/><span>Fantasy : $623.18M</span><br/><span>Family : $600.96M</span><br/><span>History : $563.59M</span><br/><span>Comedy : $491.89M</span><br/></>}>
           <div className="flex-1 px-2 backdrop-blur-2xl bg-white/50 justify-center bg-gray-700 shadow rounded h-300px">
             <div className="p-3 flex justify-center item-center">
               {/* <p className="text-gray-900 font-bold">Total returns</p> */}
@@ -58,7 +58,7 @@ const Charts = () => {
           </div>
 
           <div className="w-1/4">
-          <TooltipDiv tooltipText="TOOLTIPS">
+          <TooltipDiv tooltipText={<><span>Biography : 9.32</span><br/><span>Animation : 8.05</span><br/><span>Horror : 5.46</span><br/><span>History : 5.24</span><br/><span>Crime : 4.99</span><br/></>}>
           <div className="flex-1 px-2 backdrop-blur-2xl bg-white/50 justify-center bg-gray-700 shadow rounded max-h-300px">
             <div className="p-3 flex justify-center item-center">
               {/* <p className="text-gray-900 font-bold">Total sales</p> */}
@@ -70,7 +70,7 @@ const Charts = () => {
           </div>
 
           <div className="w-1/4">
-          <TooltipDiv tooltipText="TOOLTIPS">
+          <TooltipDiv tooltipText={<><span>Drama : 362</span><br/><span>Comedy : 221</span><br/><span>Action : 193</span><br/><span>Thriller : 170</span><br/><span>Crime : 110</span><br/></>}>
           <div className="flex-1 px-2 backdrop-blur-2xl bg-white/50 justify-center bg-gray-700 shadow rounded max-h-300px">
             <div className="p-3 flex justify-center item-center">
               {/* <p className="text-gray-900 font-bold">Total subscriptions</p> */}
@@ -81,7 +81,7 @@ const Charts = () => {
           </TooltipDiv>
           </div>
           <div className="w-1/4">
-          <TooltipDiv tooltipText="TOOLTIPS">
+          <TooltipDiv tooltipText={<><span>Musical : 135.12</span><br/><span>Action : 126.0</span><br/><span>Music : 124.5</span><br/><span>History : 123.86</span><br/><span>Crime : 123.8</span><br/></>}>
           <div className="flex-1 px-2 backdrop-blur-2xl bg-white/50 justify-center bg-gray-700 shadow rounded h-300px">
             <div className="p-3 flex justify-center item-center">
               {/* <p className="text-gray-900 font-bold">Total returns</p> */}
