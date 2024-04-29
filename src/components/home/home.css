@@ -1,44 +1,73 @@
-.slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    background-color: green;
-    cursor: pointer; /* Cursor on hover */
-    border-radius: 50%; /* Circular thumb */
+/* Home.css */
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
   }
   
-  .slider-track {
-    -webkit-appearance: none;
-    appearance: none;
+  .home-content {
+    display: flex;
+    justify-content: space between;
     width: 100%;
-    height: 8px;
-    background-color: #ccc;
-    outline: none; /* Removes the outline */
   }
   
-  .slider-track::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    background-color: green;
-    cursor: pointer; /* Cursor on hover */
-    border-radius: 50%; /* Circular thumb */
+  .filter-cast-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: center;
   }
   
-  .slider-track::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background-color: green;
-    cursor: pointer; /* Cursor on hover */
-    border-radius: 50%; /* Circular thumb */
+  .slider-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
   }
   
-  .slider-track::-ms-thumb {
-    width: 25px;
-    height: 25px;
-    background-color: green;
-    cursor: pointer; /* Cursor on hover */
-    border-radius: 50%;
+  .slider-container label, /* Target slider labels */
+  .list-container div { /* Target list items */
+    color: #8884d8; /* Set the desired color */
   }
+  
+  .list-container {
+    width: 50%; 
+    margin-left: 2em; /* Maintain space between sliders and the list */
+  }
+  
+  .list-container div {
+    white-space: nowrap; /* Prevents line breaks */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Adds ellipsis at the end of truncated text */
+    font-size: 0.9em; /* Reduce font size slightly */
+    line-height: 1.2em; /* Increase line height for better readability */
+  }
+  
+  .num-votes-slider .MuiSlider-track {
+    background-color: #82ca9d; /* Customize the track color */
+  }
+  
+  .num-votes-slider .MuiSlider-thumb {
+    background-color: #5EBB81; /* Customize the thumb color */
+  }
+  
+  .average-rating-slider .MuiSlider-track {
+    background-color: #82ca9d; /* Customize the track color */
+  }
+  
+  .average-rating-slider .MuiSlider-thumb {
+    background-color: #5EBB81; /* Customize the thumb color */
+  }
+  
+  .num-votes-slider .MuiSlider-root,
+  .average-rating-slider .MuiSlider-root {
+    border: none; /* Removes any border on the slider root */
+    box-shadow: none; /* Removes any box shadow around the slider */
+  }
+  
+  .num-votes-slider .MuiSlider-root:focus,
+  .average-rating-slider .MuiSlider-root:focus {
+    outline: none; /* Prevents focus outlines from appearing */
+  }
+  

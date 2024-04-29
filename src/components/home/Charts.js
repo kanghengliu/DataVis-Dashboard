@@ -13,6 +13,8 @@ import GenreRatings from "./GenreViz";
 import DoubleAxis from "./DoubleAxis";
 import StreamgraphRatings from "./streamgraph_ratings";
 import Scatter from "./Scatter";
+import TooltipDiv from "../TootipDiv";
+import CastFilter from './cast_filter';
 
 
 
@@ -64,27 +66,35 @@ const Charts = () => {
             <div className="w-1/3 flex justify-center item-center"> <p className="text-gray-900 font-bold">Average Rating Distribution</p></div>
         </div>
         <div className="flex gap-3">
-
-            <div className="w-2/3 h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
+          <div className="w-2/3">
+            <TooltipDiv tooltipText="TOOLTIPS">
+            <div className="w-full h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center">
               <DoubleAxis />
             </div>
-
-            <div className="w-1/3 h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
+            </TooltipDiv>
+          </div>
+          <div className="w-1/3">
+            <TooltipDiv tooltipText="TOOLTIPS">
+            <div className="w-full h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
               <StreamgraphRatings />
             </div>
+            </TooltipDiv>
+          </div>
 
         </div>
       </section>
 
       <section className="my-4 px-4">
         <div className="flex gap-3 mb-2 justify-center">
-            <div className="w-1/3 flex justify-center item-center"> <p className="text-gray-900 font-bold">Filter for cast</p></div>
+
+            <div className="w-1/3 flex justify-center item-center"> <p className="text-gray-900 font-bold">Cast Filter</p></div>
             <div className="w-2/3 flex justify-center item-center"> <p className="text-gray-900 font-bold">Budget vs. Box Office</p></div>
+
         </div>
         <div className="flex gap-3">
 
             <div className="w-1/3 h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
-              {/* < /> */}
+              <CastFilter />
             </div>
 
             <div className="w-2/3 h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
