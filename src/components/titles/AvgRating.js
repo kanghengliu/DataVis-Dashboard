@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import useSWR from 'swr';
-import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, Label, ReferenceLine } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, Label, ReferenceLine, Customized } from 'recharts';
 
 const fetcher = url => fetch(url).then(res => res.json());
 
@@ -21,6 +21,20 @@ const AreaChartPlot = ({ tconst }) => {
 
     if (error) return <div>Failed to load data.</div>;
     if (!data) return <div>Loading...</div>;
+
+
+    const renderCustomImage = (props) => {
+      const { payload, x, y, width, height } = props;
+      console.log("payload", payload)
+      if (!movieRating || !payload) return null; 
+      // Find the plot point that matches the movieRating
+      const entry = payload.find(p => p.Rating === movieRating);
+      console.log("entry", entry)
+      if (!entry) return null;
+      return (
+          <image href="/data/image.png" x={x + width / 2 - 10} y={y + height / 2 - 10} width={20} height={20} />
+      );
+  };
 
     return (
         <>
@@ -44,6 +58,7 @@ const AreaChartPlot = ({ tconst }) => {
               {movieRating && (
                   <ReferenceLine x={movieRating} stroke="red" label={{ value: `Rating: ${movieRating}`, position: 'top' }} />
               )}
+              <Customized component={renderCustomImage} />
             </AreaChart>
           </ResponsiveContainer>
         </>

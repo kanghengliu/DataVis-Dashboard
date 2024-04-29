@@ -46,11 +46,11 @@ const CastList = ({ tconst }) => {
     return () => stopAutoScroll(); // Cleanup on component unmount
   }, []);
 
-  if (error) return <div>Failed to load the cast data.</div>;
-  if (!data) return <div>Loading cast...</div>;
+  if (error) return <div className='flex justify-center items-center'>Failed to load the cast data.</div>;
+  if (!data) return <div className='flex justify-center items-center'>Loading cast...</div>;
 
   return (
-    <div className="p-4 rounded overflow-auto max-h-48 justify-center items-center hide-scrollbar" ref={listRef}
+    <div className="p-4 rounded overflow-auto h-48 justify-center items-center hide-scrollbar" ref={listRef}
          onMouseEnter={stopAutoScroll} onMouseLeave={startAutoScroll}>
       <ul>
         {cast.map((person, index) => (

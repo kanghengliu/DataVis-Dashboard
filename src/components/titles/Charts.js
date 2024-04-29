@@ -32,7 +32,7 @@ const Charts = ({ tconst, title }) => {
         <div className="w-1/3 h-[250px] bg-gray-700 rounded backdrop-blur-2xl bg-white/50 justify-center p-4">
           {/* Cast Members: */}
           <div className='flex justify-center items-center'><h3 className="font-bold text-gray-800">Cast & Crew</h3></div>
-          <div className='flex justify-center items-center p-2'>
+          <div className='flex justify-center items-center p-2 text-gray-800'>
           <CastList tconst={tconst} />
           </div> 
         </div>
