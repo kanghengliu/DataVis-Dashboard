@@ -38,21 +38,6 @@ const Sidebar = () => {
           </div>
           <div className='overflow-y-auto py-5 px-3  h-screen bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700'>
             <ul className="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700">
-              <li>
-                {/* <a href="#" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"> */}
-                  <span className="ml-3 text-gray-800">Billy</span>
-                {/* </a> */}
-              </li>
-              <li>
-                {/* <a href="#" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"> */}
-                  <span className="ml-3 text-gray-800">Kang</span>
-                {/* </a> */}
-              </li>
-              <li>
-                {/* <a href="#" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"> */}
-                  <span className="ml-3 text-gray-800">JaeHo</span>
-                {/* </a> */}
-              </li>
             </ul>
           </div>
         </aside>
