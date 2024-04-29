@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Slider from "@mui/material/Slider";
 import axios from "axios";
-import "./Home.css"; // Add this line for additional styling
+import "./Home2.css"; // Add this line for additional styling
 
 const FilterCast = ({ onFilterChange }) => {
   const [numVotes, setNumVotes] = useState(500000);
