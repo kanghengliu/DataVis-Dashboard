@@ -62,19 +62,19 @@ const Charts = () => {
 
       <section className="my-4 px-4">
         <div className="flex gap-3 mb-2 justify-center">
-            <div className="w-2/3 flex justify-center item-center"> <p className="text-gray-900 font-bold">Titles Released Over Time</p></div>
+            <div className="w-2/3 flex justify-center item-center"> <p className="text-gray-900 font-bold">Titles Released and Unique Workers Over Time</p></div>
             <div className="w-1/3 flex justify-center item-center"> <p className="text-gray-900 font-bold">Average Rating Distribution</p></div>
         </div>
         <div className="flex gap-3">
           <div className="w-2/3">
-            <TooltipDiv tooltipText="TOOLTIPS">
+            <TooltipDiv tooltipText="This graph charts the film industry's evolution over time, showcasing the increasing number of movie releases and the growing diversity of creative talent. The upward trends illustrate cinema's expanding influence in culture and entertainment. Note the temporary decline around 2020, reflecting the impact of the COVID-19 pandemic on film production and releases.">
             <div className="w-full h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center">
               <DoubleAxis />
             </div>
             </TooltipDiv>
           </div>
           <div className="w-1/3">
-            <TooltipDiv tooltipText="TOOLTIPS">
+            <TooltipDiv tooltipText="This graph visualizes the distribution of average movie ratings across the ten most popular genres. The width of each color band indicates the number of movies from each genre that have a particular rating. A peak around ratings of 6 to 7 is noticeable across all genres, reflecting how different genres resonate with audiences.">
             <div className="w-full h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
               <StreamgraphRatings />
             </div>
@@ -88,7 +88,7 @@ const Charts = () => {
         <div className="flex gap-3 mb-2 justify-center">
 
             <div className="w-1/3 flex justify-center item-center"> <p className="text-gray-900 font-bold">Cast Filter</p></div>
-            <div className="w-2/3 flex justify-center item-center"> <p className="text-gray-900 font-bold">Budget vs. Box Office</p></div>
+            <div className="w-2/3 flex justify-center item-center"> <p className="text-gray-900 font-bold">Budget vs. Box Office (with filter)</p></div>
 
         </div>
         <div className="flex gap-3">
