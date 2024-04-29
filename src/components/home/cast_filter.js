@@ -5,7 +5,7 @@ import "./Home.css"; // Add this line for additional styling
 
 const FilterCast = ({ onFilterChange }) => {
   const [numVotes, setNumVotes] = useState(500000);
-  const [averageRating, setAverageRating] = useState(8);
+  const [averageRating, setAverageRating] = useState(7);
 
   useEffect(() => {
     onFilterChange({ numVotes, averageRating });
@@ -16,6 +16,7 @@ const FilterCast = ({ onFilterChange }) => {
       <div className="slider-container">
         <label>Num Votes:</label>
         <Slider
+          className="num-votes-slider"
           min={0}
           max={1000000}
           value={numVotes}
@@ -25,14 +26,15 @@ const FilterCast = ({ onFilterChange }) => {
         />
 
         <label>Average Rating:</label>
-        <Slider
-          min={1}
-          max={10}
-          value={averageRating}
-          onChange={(e, newValue) => setAverageRating(newValue)}
-          step={0.1}
-          valueLabelDisplay="auto"
-        />
+          <Slider
+            className="average-rating-slider"
+            min={1}
+            max={10}
+            value={averageRating}
+            onChange={(e, newValue) => setAverageRating(newValue)}
+            step={0.1}
+            valueLabelDisplay="auto"
+          />
       </div>
     </div>
   );
@@ -65,11 +67,10 @@ const Home = () => {
 
   return (
     <div className="home-container">
-
       <div className="home-content">
         <FilterCast onFilterChange={handleFilterChange} />
 
-        <div className="list-container">
+        <div class="list-container">
           {filteredData.map((person, index) => (
             <div key={index}>
               <p>{person.name}: {person.count}</p>
