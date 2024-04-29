@@ -6,7 +6,7 @@ const TooltipDiv = ({ children, tooltipText }) => {
     <div className="container">
       {children}
       <div className="question-mark">?</div>
-      <div className="tooltip-text">{tooltipText}</div>
+      <div className="tooltip-text text-xs">{tooltipText}</div>
     </div>
   );
 };

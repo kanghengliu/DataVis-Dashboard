@@ -92,13 +92,19 @@ const Charts = () => {
 
         </div>
         <div className="flex gap-3">
-
-            <div className="w-1/3 h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
+            <div className="w-1/3">
+            <TooltipDiv tooltipText="This filter displays the top ten cast and crew members with the most films based on two distinct criteria: the number of votes a movie had on IMDb and its average rating. The sliders allow you to adjust these filters, revealing the most frequent cast and crew members based on the selected criteria.">
+            <div className="w-full h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
               <CastFilter />
             </div>
-
-            <div className="w-2/3 h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
+            </TooltipDiv>
+            </div>
+            <div className="w-2/3">
+            <TooltipDiv tooltipText="This scatter plot shows the relationship between a movie's budget and its box office earnings. The sliders on the right control the minimum and maximum budget ranges, filtering the movies displayed accordingly.">
+            <div className="w-full h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
               <Scatter />
+            </div>
+            </TooltipDiv>
             </div>
 
         </div>

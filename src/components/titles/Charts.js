@@ -19,8 +19,8 @@ const Charts = ({ tconst, title }) => {
         </div>
         <div className="flex gap-3">
           <div className="w-3/4">
-          <TooltipDiv tooltipText="TOOLTIPS">
-          <div className="w-full h-[520px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
+          <TooltipDiv tooltipText="This map displays all filming locations for the selected movie, with cow markers indicating each site. Use the search bar on the top right to input a movie title and see its filming locations globally.">
+          <div className="w-full h-[565px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
             <MoviesMap tconst={tconst} />
           </div>
           </TooltipDiv>
@@ -40,7 +40,7 @@ const Charts = ({ tconst, title }) => {
         </div>
         <div className="flex m-4 gap-7">
         <div className="w-1/3">
-        <TooltipDiv tooltipText="TOOLTIPS">
+        <TooltipDiv tooltipText="This plot shows the movie's release year relative to all others, with a vertical line indicating its position over time.">
         <div className="w-full h-[250px] bg-gray-700 rounded backdrop-blur-2xl bg-white/50 justify-center items-center">
           <MoviesOverTime tconst={tconst}/>
         </div>
@@ -54,7 +54,7 @@ const Charts = ({ tconst, title }) => {
           </div> 
         </div>
         <div className="w-1/3">
-        <TooltipDiv tooltipText="TOOLTIPS">
+        <TooltipDiv tooltipText="This plot visualizes the movie's rating relative to others, with a vertical line indicating its position within the rating distribution.">
         <div className="w-full h-[250px] bg-gray-700 rounded backdrop-blur-2xl bg-white/50 justify-center items-center">
           <Ratings tconst={tconst}/>
         </div>

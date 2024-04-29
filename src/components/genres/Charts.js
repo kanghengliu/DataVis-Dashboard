@@ -21,14 +21,14 @@ const Charts = () => {
         </div>
         <div className="flex gap-3">
           <div className="w-1/2">
-          <TooltipDiv tooltipText="TOOLTIPS">
+          <TooltipDiv tooltipText="This Barplot shows the average sentiment polarity of movie genre scripts comparint 2010 to 2020. Sentiment polarity was extracted from TextBlob and is shown from a scale of -1 to 1, where -1 is negative and 1 is positive.">
             <div className="w-full h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
               <BarPlot />
             </div>
           </TooltipDiv>
           </div>
           <div className="w-1/2">
-          <TooltipDiv tooltipText="TOOLTIPS">
+          <TooltipDiv tooltipText="This lineplot shows the sum of Box Office scores from each genre over time. Hovering over the legend emphasizes a specific area of the genre in the plot.">
             <div className="w-full h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
               <CustomAreaChart />
             </div>
@@ -102,7 +102,7 @@ const Charts = () => {
         </div>
         <div className="flex gap-3">
           <div className="w-1/3">
-          <TooltipDiv tooltipText="TOOLTIPS">
+          <TooltipDiv tooltipText="This graph shows the number of movies released over time, with each color representing a different genre. Hover over each segment to see the corresponding genre, following the same color scheme as the graph to the right.">
             <div className="w-full h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
               <Streamgraph />
             </div>
@@ -110,7 +110,7 @@ const Charts = () => {
           </div>
             
           <div className="w-1/3">
-          <TooltipDiv tooltipText="TOOLTIPS">
+          <TooltipDiv tooltipText="This genre chord visualizes the distribution and interactions of movies across various genres in the dataset. It highlights how genres overlap, illustrating the presence of hybrid genres such as action-thriller and romantic comedy.">
             <div className="w-full h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
               <ChordDiagram />
             </div>
@@ -118,7 +118,7 @@ const Charts = () => {
           </div>
 
           <div className="w-1/3">
-          <TooltipDiv tooltipText="TOOLTIPS">
+          <TooltipDiv tooltipText="This graph displays the average rating over time for five of the most popular genres. The declining trend may indicate that the increase in the number of movies has led to lower overall quality.">
             <div className="w-full h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
               <AverageRating />
             </div>
