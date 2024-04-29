@@ -50,7 +50,7 @@ const CastList = ({ tconst }) => {
   if (!data) return <div className='flex justify-center items-center'>Loading cast...</div>;
 
   return (
-    <div className="p-4 rounded overflow-auto h-48 justify-center items-center hide-scrollbar" ref={listRef}
+    <div className="p-2 rounded overflow-auto h-52 justify-center items-center hide-scrollbar" ref={listRef}
          onMouseEnter={stopAutoScroll} onMouseLeave={startAutoScroll}>
       <ul>
         {cast.map((person, index) => (

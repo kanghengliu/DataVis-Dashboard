@@ -8,13 +8,13 @@
   --background-end-rgb: 234, 179, 226;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 39, 75, 84;
+    --background-end-rgb: 78, 28, 74;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -24,6 +24,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+  margin: 0; /* Remove default margin */
 }
 
 @layer utilities {

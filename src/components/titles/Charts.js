@@ -6,6 +6,7 @@ import CastList from './cast';
 import FinancialInfo from './financials';
 import MoviesOverTime from './MovieNumber';
 import Ratings from './AvgRating';
+import TooltipDiv from '../TootipDiv';
 
 const Charts = ({ tconst, title }) => {
   return (
@@ -17,26 +18,49 @@ const Charts = ({ tconst, title }) => {
           </div>
         </div>
         <div className="flex gap-3">
-          <div className="w-3/4 h-[600px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
+          <div className="w-3/4">
+          <TooltipDiv tooltipText="TOOLTIPS">
+          <div className="w-full h-[520px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
             <MoviesMap tconst={tconst} />
           </div>
-          <div className="w-1/4 h-[600px] bg-gray-700 rounded flex
+          </TooltipDiv>
+          </div>
+          <div className="w-1/4 h-[520px] bg-gray-700 rounded flex
           backdrop-blur-xxl bg-white/50 justify-center items-center p-2">
             <FinancialInfo tconst={tconst} />
           </div>
         </div>
       </section>
 
-      <section className="flex my-4 px-4 gap-2">
-        <div className="w-1/3 h-[250px] bg-gray-700 rounded backdrop-blur-2xl bg-white/50 justify-center items-center"><MoviesOverTime tconst={tconst}/></div>
+      <section className="my-4 px-4 gap-2">
+      <div className="flex gap-7 my-4 px-4 mb-2 justify-center">
+            <div className="w-1/3 flex justify-center items-center"><p className="text-gray-900 font-bold">Movies Released</p></div>
+            <div className="w-1/3 flex justify-center items-center"><p className="text-gray-900 font-bold">Cast & Crew</p></div>
+            <div className="w-1/3 flex justify-center items-center"><p className="text-gray-900 font-bold">Movie Ratings</p></div>
+        </div>
+        <div className="flex m-4 gap-7">
+        <div className="w-1/3">
+        <TooltipDiv tooltipText="TOOLTIPS">
+        <div className="w-full h-[250px] bg-gray-700 rounded backdrop-blur-2xl bg-white/50 justify-center items-center">
+          <MoviesOverTime tconst={tconst}/>
+        </div>
+        </TooltipDiv>
+        </div>
         <div className="w-1/3 h-[250px] bg-gray-700 rounded backdrop-blur-2xl bg-white/50 justify-center p-4">
           {/* Cast Members: */}
-          <div className='flex justify-center items-center'><h3 className="font-bold text-gray-800">Cast & Crew</h3></div>
+          {/* <div className='flex justify-center items-center'><h3 className="font-bold text-gray-800">Cast & Crew</h3></div> */}
           <div className='flex justify-center items-center p-2 text-gray-800'>
           <CastList tconst={tconst} />
           </div> 
         </div>
-        <div className="w-1/3 h-[250px] bg-gray-700 rounded backdrop-blur-2xl bg-white/50 justify-center items-center"><Ratings tconst={tconst}/></div>
+        <div className="w-1/3">
+        <TooltipDiv tooltipText="TOOLTIPS">
+        <div className="w-full h-[250px] bg-gray-700 rounded backdrop-blur-2xl bg-white/50 justify-center items-center">
+          <Ratings tconst={tconst}/>
+        </div>
+        </TooltipDiv>
+        </div>
+        </div>
       </section>
     </>
   );
