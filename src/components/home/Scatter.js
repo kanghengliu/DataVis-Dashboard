@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import "./home.css";
+import "./ScatterSlider.css";
 
 const initialData = 
 [
