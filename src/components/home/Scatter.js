@@ -1680,11 +1680,6 @@ const initialData =
       "box_office": 91.97
   },
   {
-      "primaryTitle": "Train to Busan",
-      "budget": 10000.0,
-      "box_office": 92.77
-  },
-  {
       "primaryTitle": "Escape Plan",
       "budget": 50.0,
       "box_office": 137.33
@@ -2158,11 +2153,6 @@ const initialData =
       "primaryTitle": "Promising Young Woman",
       "budget": null,
       "box_office": 18.85
-  },
-  {
-      "primaryTitle": "Dangal",
-      "budget": 700.0,
-      "box_office": 303.72
   },
   {
       "primaryTitle": "Sausage Party",
@@ -2675,11 +2665,6 @@ const initialData =
       "box_office": 315.03
   },
   {
-      "primaryTitle": "Laal Singh Chaddha",
-      "budget": 1800.0,
-      "box_office": 12.09
-  },
-  {
       "primaryTitle": "Riddick",
       "budget": 38.0,
       "box_office": 98.34
@@ -2733,11 +2718,6 @@ const initialData =
       "primaryTitle": "The Lego Batman Movie",
       "budget": 80.0,
       "box_office": 312.34
-  },
-  {
-      "primaryTitle": "The Handmaiden",
-      "budget": 10000.0,
-      "box_office": 37.86
   },
   {
       "primaryTitle": "Before Midnight",
@@ -2858,11 +2838,6 @@ const initialData =
       "primaryTitle": "One Day",
       "budget": 15.0,
       "box_office": 59.39
-  },
-  {
-      "primaryTitle": "RRR",
-      "budget": 3500.0,
-      "box_office": 166.61
   },
   {
       "primaryTitle": "Begin Again",
@@ -3505,11 +3480,6 @@ const initialData =
       "box_office": 134.41
   },
   {
-      "primaryTitle": "Baahubali: The Beginning",
-      "budget": 18.03,
-      "box_office": 24.55
-  },
-  {
       "primaryTitle": "Black Mirror: Bandersnatch",
       "budget": null,
       "box_office": null
@@ -4100,11 +4070,6 @@ const initialData =
       "box_office": null
   },
   {
-      "primaryTitle": "Baahubali 2: The Conclusion",
-      "budget": 2500.0,
-      "box_office": 254.16
-  },
-  {
       "primaryTitle": "Power Rangers",
       "budget": 100.0,
       "box_office": 142.34
@@ -4270,7 +4235,7 @@ const initialData =
 export default class Example extends PureComponent {
   state = {
     lowerBound: 0,
-    upperBound: 10000,
+    upperBound: 400,
     filteredData: initialData,
   };
 
@@ -4326,9 +4291,9 @@ export default class Example extends PureComponent {
         <div className="justify-center w-50 h-2 m-2">
           <div className="text-black mb-2">
             <label htmlFor="lowerBound">Budget Filter:</label>
-            <input type="range" className="slider-track slider-thumb" name="lowerBound" min="0" max="10000" value={lowerBound} onChange={this.handleRangeChange} />
+            <input type="range" className="slider-track slider-thumb" name="lowerBound" min="0" max="400" value={lowerBound} onChange={this.handleRangeChange} />
           </div>
-            <input type="range" className="slider-track slider-thumb" name="upperBound" min="0" max="10000" value={upperBound} onChange={this.handleRangeChange} />
+            <input type="range" className="slider-track slider-thumb" name="upperBound" min="0" max="400" value={upperBound} onChange={this.handleRangeChange} />
         </div>
       </div>
     );
