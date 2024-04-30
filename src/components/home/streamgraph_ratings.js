@@ -1,15 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
+import './axis.css';
+
 
 function Streamgraph() {
-  const ref = useRef();
-  const tooltipRef = useRef();
-  const dataPath = '/data/genre_avg_rating.json'; // Path to JSON file
-  const customColors = ['#9e0142', '#d53e4f', '#f46d43', '#fdae61', '#fee08b', 
-                        '#e6f598', '#abdda4', '#66c2a5', '#3288bd', '#5e4fa2'];
+  const ref = useRef(); // For the SVG element
+  const dataPath = '/data/genre_avg_rating.json'; // Path to your JSON file
 
   useEffect(() => {
-    const tooltip = d3.select(tooltipRef.current);
     d3.json(dataPath).then(data => {
       if (data) {
         const margin = { top: 20, right: 20, bottom: 40, left: 60 };
@@ -47,7 +45,11 @@ function Streamgraph() {
           .domain([1, 10])
           .range([height, 0]);
 
-        const color = d3.scaleOrdinal(customColors); // Use custom color array
+        // Define custom color array
+        const customColors = ['#9e0142', '#d53e4f', '#f46d43', '#fdae61', '#fee08b', 
+                            '#e6f598', '#abdda4', '#66c2a5', '#3288bd', '#5e4fa2'];
+                            
+        const color = d3.scaleOrdinal(customColors); // Use the custom color array
 
         const area = d3.area()
           .x(d => x(d[0]))
@@ -55,55 +57,96 @@ function Streamgraph() {
           .y(d => y(d.data.averageRating))
           .curve(d3.curveBasis);
 
+        // Tooltip setup
+        const tooltip = d3.select("body").append("div")
+          .attr("class", "tooltip")
+          .style("opacity", 0)
+          .style("position", "absolute")
+          .style("background-color", "black")
+          .style("border", "solid")
+          .style("border-width", "2px")
+          .style("border-radius", "5px")
+          .style("padding", "5px");
+
         svg.selectAll('.layer')
           .data(stack)
           .join('path')
           .attr('class', 'area')
-          .style('fill', (d, i) => color(i))
-          .attr('d', area);
+          .style("fill", (d, i) => color(i))
+          .attr('d', area)
+          .on("mouseover", (event, d) => {
+              tooltip.transition()
+                .duration(200)
+                .style("opacity", 0.9);
+              tooltip.html(`Genre: ${d.key}`)
+                .style("left", `${event.pageX}px`)
+                .style("top", `${event.pageY}px`);
+          })
+          .on("mouseout", () => {
+              tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+          });
 
-        // Axis and Labels with White Text
+        // Axis rendering with gray styling
+        const xAxis = d3.axisBottom(x).tickFormat(d => Math.abs(d));
+        const yAxis = d3.axisLeft(y).tickFormat(d => Math.abs(d));
+
+        svg.append("g")
+            .attr('transform', `translate(0,${height})`)
+            .call(xAxis);
+    
+        svg.selectAll(".tick text")
+            .style("fill", "gray"); // For text tick labels
+        
+        svg.selectAll(".tick line")
+            .style("stroke", "gray"); // For tick lines
+        
+        svg.selectAll(".domain")
+            .style("stroke", "gray"); // For the axis line
+        
+        svg.append("g")
+            .call(yAxis);
+        
+        svg.selectAll(".y-axis .tick text")
+            .style("fill", "gray"); // For text tick labels
+        
+        svg.selectAll(".y-axis .tick line")
+            .style("stroke", "gray"); // For tick lines
+        
+        svg.selectAll(".y-axis .domain")
+            .style("stroke", "gray"); // For the axis line
+    
+        // Re-add labels after axis rendering
         svg.append('g')
           .attr('transform', `translate(0,${height})`)
-          .call(d3.axisBottom(x).tickFormat(d => Math.abs(d)))
           .append('text')
-          .attr('class', 'axis-label')
-          .attr('fill', 'white') // Changed color to white
-          .attr('y', 30)
-          .attr('x', width / 2)
-          .attr('text-anchor', 'middle')
-          .text('Count');
+          .attr("class", "axis-label")
+          .attr("fill", "gray")
+          .attr("y", 30)
+          .attr("x", width / 2)
+          .attr("text-anchor", "middle")
+          .text("Count");
 
-        svg.append('g')
+        svg.append("g")
           .call(d3.axisLeft(y))
           .append('text')
-          .attr('class', 'axis-label')
-          .attr('fill', 'white') // Changed color to white
-          .attr('transform', 'rotate(-90)')
-          .attr('y', -50)
-          .attr('x', -height / 2)
-          .attr('text-anchor', 'middle')
-          .text('Rating');
+          .attr("class", "axis-label")
+          .attr("fill", "gray")
+          .attr("transform", "rotate(-90)")
+          .attr("y", -30)
+          .attr("x", -height / 2)
+          .attr("text-anchor", "middle")
+          .text("Rating");
+
+        // Cleanup tooltip on dismount
+        return () => d3.select('.tooltip').remove();
       }
     });
-
-    return () => d3.select('.tooltip').remove();
   }, []);
 
   return (
-    <>
-      <svg ref={ref}></svg>
-      <div ref={tooltipRef} className="tooltip" style={{
-        position: 'absolute',
-        opacity: 0,
-        backgroundColor: 'white',
-        border: 'solid 1px #aaa',
-        borderRadius: '4px',
-        padding: '5px',
-        pointerEvents: 'none',
-        zIndex: 10
-      }}></div>
-    </>
+    <svg ref={ref}></svg>
   );
 }
 
