@@ -11,15 +11,18 @@ function Streamgraph() {
       if (data) {
        // Dimensions and margins of the graph, adjusted for legend
        const margin = { top: 20, right: 100, bottom: 30, left: 50 };
-       const width = 500 - margin.left - margin.right;
+       const outerWidth = 450; 
+       const width = outerWidth - margin.left - margin.right;
        const height = 250 - margin.top - margin.bottom;
 
         // Append the SVG object to the current ref element
-        const svg = d3.select(ref.current)
-          .attr('width', width + margin.left + margin.right)
-          .attr('height', height + margin.top + margin.bottom)
-          .append('g')
-          .attr('transform', `translate(${margin.left},${margin.top})`);
+      const svg = d3.select(ref.current)
+        .attr('width', '100%') // Responsive width
+        .attr('height', '100%') // Responsive height
+        .attr('viewBox', `0 0 ${outerWidth} ${height + margin.top + margin.bottom}`) // ViewBox for responsive design
+        .attr('preserveAspectRatio', 'xMidYMid meet') // Preserve aspect ratio
+        .append('g')
+        .attr('transform', `translate(${margin.left},${margin.top})`);
 
         // Parse the data into a suitable format
         const parsedData = Object.entries(data).map(([key, value]) => ({ year: key, ...value }));
