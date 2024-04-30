@@ -46,7 +46,7 @@ const CombinedAreaChart = () => {
               <Tooltip />
               <Legend />
               <Area yAxisId="actors" type="monotone" dataKey="Number of Actors" stroke="#82ca9d" fillOpacity={1} fill="url(#colorActors)" />
-              <Area yAxisId="movies" type="monotone" dataKey="Number_of_Movies" stroke="#8884d8" fillOpacity={1} fill="url(#colorMovies)" />
+              <Area yAxisId="movies" type="monotone" dataKey="Number_of_Movies" name="Number of Movies" stroke="#8884d8" fillOpacity={1} fill="url(#colorMovies)" />
             </AreaChart>
           </ResponsiveContainer>
         </>
