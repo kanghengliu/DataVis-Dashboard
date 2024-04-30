@@ -10,6 +10,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import useSWR from "swr";
+import "./CustomAreaPlot.css";
 
 const fetcher = url => fetch(url).then(res => res.json());
 
@@ -32,7 +33,7 @@ const CustomAreaChart = () => {
     activeKey === key || activeKey === null ? 0.8 : 0.2;
 
   return (
-    <ResponsiveContainer width={730} height={250}>
+    <ResponsiveContainer width={730} height={330}>
       <AreaChart
         data={data}
         margin={{ top: 10, right: 30, left: 50, bottom: 10 }} // Increased left and bottom margins
@@ -40,7 +41,7 @@ const CustomAreaChart = () => {
         <XAxis dataKey="year" label={{ value: "Year", position: "bottom", dy: -6 }} /> 
         <YAxis label={{ value: "Revenue ($ mil)", angle: -90, position: "left", dx: -10, dy: -55}} />
         <CartesianGrid strokeDasharray="3 3" />
-        <Tooltip />
+        <Tooltip wrapperStyle={{zIndex: 10000, fontSize: '0.75rem', margin: 0, padding: 0, backgroundColor: "white"}} />
         <Legend layout="horizontal" verticalAlign="top" align="center"
           onMouseEnter={handleLegendMouseEnter}
           onMouseLeave={handleLegendMouseLeave}

@@ -22,14 +22,14 @@ const Charts = () => {
         <div className="flex gap-3">
           <div className="w-1/2">
           <TooltipDiv tooltipText="This Barplot shows the average sentiment polarity of movie genre scripts comparint 2010 to 2020. Sentiment polarity was extracted from TextBlob and is shown from a scale of -1 to 1, where -1 is negative and 1 is positive.">
-            <div className="w-full h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
+            <div className="w-full h-[350px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
               <BarPlot />
             </div>
           </TooltipDiv>
           </div>
           <div className="w-1/2">
           <TooltipDiv tooltipText="This lineplot shows the sum of Box Office scores from each genre over time. Hovering over the legend emphasizes a specific area of the genre in the plot.">
-            <div className="w-full h-[300px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
+            <div className="w-full h-[350px] bg-gray-700 rounded flex backdrop-blur-2xl bg-white/50 justify-center items-center p-2">
               <CustomAreaChart />
             </div>
           </TooltipDiv>
@@ -71,8 +71,8 @@ const Charts = () => {
 
           <div className="w-1/4">
           <TooltipDiv tooltipText={<><span>Drama : 362</span><br/><span>Comedy : 221</span><br/><span>Action : 193</span><br/><span>Thriller : 170</span><br/><span>Crime : 110</span><br/></>}>
-          <div className="flex-1 px-2 backdrop-blur-2xl bg-white/50 justify-center bg-gray-700 shadow rounded max-h-300px">
-            <div className="p-3 flex justify-center item-center">
+          <div className="flex-1 px-2 bg-white/50 justify-center bg-gray-700 shadow rounded max-h-300px">
+            <div className="p-3 flex justify-center item-center z-1">
               {/* <p className="text-gray-900 font-bold">Total subscriptions</p> */}
               <p className="py-4 font-bold text-gray-900">Drama : 362 </p>
               {/* <p className="text-green-300">+34.5%</p> */}
@@ -82,8 +82,8 @@ const Charts = () => {
           </div>
           <div className="w-1/4">
           <TooltipDiv tooltipText={<><span>Musical : 135.12</span><br/><span>Action : 126.0</span><br/><span>Music : 124.5</span><br/><span>History : 123.86</span><br/><span>Crime : 123.8</span><br/></>}>
-          <div className="flex-1 px-2 backdrop-blur-2xl bg-white/50 justify-center bg-gray-700 shadow rounded h-300px">
-            <div className="p-3 flex justify-center item-center">
+          <div className="flex-1 px-2 bg-white/50 justify-center bg-gray-700 shadow rounded h-300px">
+            <div className="p-3 flex justify-center item-center z-1">
               {/* <p className="text-gray-900 font-bold">Total returns</p> */}
               <p className="py-4 font-bold text-gray-900">Musical : 135 minutes </p>
               {/* <p className="text-green-300">+34.5%</p> */}
