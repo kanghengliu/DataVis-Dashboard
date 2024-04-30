@@ -70,7 +70,7 @@ const Home = () => {
       <div className="home-content">
         <FilterCast onFilterChange={handleFilterChange} />
 
-        <div class="list-container">
+        <div className="list-container">
           {filteredData.map((person, index) => (
             <div key={index}>
               <p>{person.name}: {person.count}</p>
