@@ -33,7 +33,7 @@ const AreaChartPlot = () => {
                 <Label value="Average Rating" offset={0} position="insideLeft" angle={-90} style={{ textAnchor: 'middle' }} />
               </YAxis>
               <Tooltip />
-              <Legend layout="horizontal" verticalAlign="top" align="center" wrapperStyle={{ top: 0 }} /> // Added Legend
+              <Legend layout="horizontal" verticalAlign="top" align="center" wrapperStyle={{ top: 0 }} />
               <Area type="monotone" dataKey="Adventure" stroke="#d53e4f" fillOpacity={0} fill="url(#colorUv)" />
               <Area type="monotone" dataKey="Comedy" stroke="#f46d43" fillOpacity={0} fill="url(#colorPv)" />
               <Area type="monotone" dataKey="Drama" stroke="#FED258" fillOpacity={0} fill="url(#colorPv)" />
