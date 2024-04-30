@@ -1,3 +1,8 @@
+
+
+
+
+
 "use client";
 import React, { useState } from 'react';
 import useSWR from 'swr';
@@ -48,17 +53,25 @@ const SearchInput = ({ onSelectMovie }) => {
         placeholder="Search..."
       />
       {suggestions.length > 0 && (
-        <ul className="absolute w-half max-w-md backdrop-blur-2xl bg-white/30 rounded-md overflow-auto z-50">
+        <ul
+          className="absolute w-half max-w-md rounded-md overflow-auto z-50"
+          style={{
+            background: 'rgba(255, 255, 255, 0.9)',
+            backdropFilter: 'blur(10px)',
+          }}
+        >
           {suggestions.map(({ tconst, title }) => (
-            <li key={tconst} onClick={() => handleClickSuggestion(tconst, title)}
-                className="px-4 py-2 hover:bg-blue-50 text-gray-800 cursor-pointer">
+            <li
+              key={tconst}
+              onClick={() => handleClickSuggestion(tconst, title)}
+              className="px-4 py-2 hover:bg-blue-50 text-gray-800 cursor-pointer"
+            >
               {title}
             </li>
           ))}
         </ul>
       )}
     </div>
-  );  
-};
+  )};  
 
 export default SearchInput;
