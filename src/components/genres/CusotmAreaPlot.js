@@ -37,8 +37,8 @@ const CustomAreaChart = () => {
         data={data}
         margin={{ top: 10, right: 30, left: 50, bottom: 10 }} // Increased left and bottom margins
       >
-        <XAxis dataKey="year" label={{ value: "Year", position: "bottom", offset: 0 }} />
-        <YAxis label={{ value: "Revenue ($ mil)", angle: -90, position: "left", offset: 5}} />
+        <XAxis dataKey="year" label={{ value: "Year", position: "bottom", dy: -6 }} /> 
+        <YAxis label={{ value: "Revenue ($ mil)", angle: -90, position: "left", dx: -10, dy: -55}} />
         <CartesianGrid strokeDasharray="3 3" />
         <Tooltip />
         <Legend layout="horizontal" verticalAlign="top" align="center"
