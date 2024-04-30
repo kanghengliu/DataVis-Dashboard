@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import MoviesMap from './map';
+import MoviesMap from './DynamicMap';
 import CastList from './cast';
 import FinancialInfo from './financials';
 import MoviesOverTime from './MovieNumber';
