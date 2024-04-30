@@ -29,7 +29,7 @@ function GenreInteractionChart() {
       .style("opacity", 0)
       .style("position", "absolute")
       .style("padding", "10px")
-      .style("background", "white")
+      .style("background", "black")
       .style("border-radius", "5px")
       .style("text-align", "center")
       .style("pointer-events", "none");

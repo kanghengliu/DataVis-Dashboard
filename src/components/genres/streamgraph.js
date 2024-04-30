@@ -53,7 +53,7 @@ function Streamgraph() {
           .attr('class', 'tooltip')
           .style('opacity', 0)
           .style('position', 'absolute')
-          .style('background-color', 'white')
+          .style('background-color', 'black')
           .style('border', 'solid')
           .style('border-width', '2px')
           .style('border-radius', '5px')
