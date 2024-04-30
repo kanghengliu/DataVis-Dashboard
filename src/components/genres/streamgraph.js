@@ -9,10 +9,10 @@ function Streamgraph() {
   useEffect(() => {
     d3.json(dataPath).then(data => {
       if (data) {
-        // Dimensions and margins of the graph
-        const margin = { top: 20, right: 20, bottom: 30, left: 50 };
-        const width = 450 - margin.left - margin.right;
-        const height = 250 - margin.top - margin.bottom;
+       // Dimensions and margins of the graph, adjusted for legend
+       const margin = { top: 20, right: 100, bottom: 30, left: 50 };
+       const width = 500 - margin.left - margin.right;
+       const height = 250 - margin.top - margin.bottom;
 
         // Append the SVG object to the current ref element
         const svg = d3.select(ref.current)
@@ -48,6 +48,27 @@ function Streamgraph() {
 
         // The color scale
         const color = d3.scaleOrdinal(customColors);
+
+        // Legend
+        const legend = svg.append("g")
+          .attr("transform", `translate(${width + 20}, 0)`)
+          .selectAll("g")
+          .data(genres)
+          .enter().append("g")
+            .attr("transform", (d, i) => `translate(0, ${i * 20})`);
+
+        legend.append("rect")
+          .attr("width", 18)
+          .attr("height", 18)
+          .style("fill", color);
+
+        legend.append("text")
+          .attr("x", 24)
+          .attr("y", 9)
+          .attr("dy", ".35em")
+          .text(d => d)
+          .style("font-size", "12px")
+          .style("font-family", "sans-serif");
 
         // Tooltip
         const tooltip = d3.select('body').append('div')
