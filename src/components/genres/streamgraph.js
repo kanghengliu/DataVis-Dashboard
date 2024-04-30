@@ -9,7 +9,7 @@ function Streamgraph() {
   useEffect(() => {
     d3.json(dataPath).then(data => {
       if (data) {
-       // Dimensions and margins of the graph, adjusted for legend
+       // Dimensions and margins of the graph adjusted for legend
        const margin = { top: 20, right: 100, bottom: 30, left: 50 };
        const outerWidth = 450; 
        const width = outerWidth - margin.left - margin.right;
