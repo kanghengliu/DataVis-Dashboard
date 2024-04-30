@@ -33,11 +33,11 @@ const AreaChartPlot = () => {
                 <Label value="Average Rating" offset={0} position="insideLeft" angle={-90} style={{ textAnchor: 'middle' }} />
               </YAxis>
               <Tooltip />
-              <Area type="monotone" dataKey="Adventure" stroke="#8884d8" fillOpacity={0} fill="url(#colorUv)" />
-              <Area type="monotone" dataKey="Comedy" stroke="#7af576" fillOpacity={0} fill="url(#colorPv)" />
-              <Area type="monotone" dataKey="Drama" stroke="#FF06E1" fillOpacity={0} fill="url(#colorPv)" />
-              <Area type="monotone" dataKey="Romance" stroke="#19FF06" fillOpacity={0} fill="url(#colorPv)" />
-              <Area type="monotone" dataKey="Thriller" stroke="#06FFFB" fillOpacity={0} fill="url(#colorPv)" />
+              <Area type="monotone" dataKey="Adventure" stroke="#d53e4f" fillOpacity={0} fill="url(#colorUv)" />
+              <Area type="monotone" dataKey="Comedy" stroke="#f46d43" fillOpacity={0} fill="url(#colorPv)" />
+              <Area type="monotone" dataKey="Drama" stroke="#FED258" fillOpacity={0} fill="url(#colorPv)" />
+              <Area type="monotone" dataKey="Romance" stroke="#3288bd" fillOpacity={0} fill="url(#colorPv)" />
+              <Area type="monotone" dataKey="Thriller" stroke="#5e4fa2" fillOpacity={0} fill="url(#colorPv)" />
             </AreaChart>
           </ResponsiveContainer>
         </>
