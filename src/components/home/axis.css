@@ -1,0 +1,16 @@
+/* Styles for both x and y axes */
+.axis-label {
+    fill: gray; /* Sets text color for axis labels */
+}
+
+.tick text {
+    fill: gray; /* Sets color for tick labels */
+}
+
+.tick line {
+    stroke: gray; /* Sets color for tick lines */
+}
+
+.domain {
+    stroke: gray; /* Sets color for axis line */
+}

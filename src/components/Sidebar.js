@@ -33,10 +33,37 @@ const Sidebar = () => {
                   <span className="flex-1 ml-3 text-left whitespace-nowrap">Titles</span>
                   {/* <svg aria-hidden="true" className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg> */}
                 </button></Link>
+              <li>
+                  <Link href="https://github.com/wmcgloin/movie_project.git">
+                    <button
+                      type="button"
+                      className="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100"
+                      aria-controls="dropdown-sales"
+                      data-collapse-toggle="dropdown-sales"
+                    >
+                      <span className="flex-1 ml-3 text-left whitespace-nowrap">Data Munging Github Repo</span>
+                      {/* <svg aria-hidden="true" className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg> */}
+                    </button>
+                  </Link>
+              </li>
+              <li>
+                  <Link href="https://github.com/kanghengliu/admin-dashboard.git">
+                    <button
+                      type="button"
+                      className="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100"
+                      aria-controls="dropdown-sales"
+                      data-collapse-toggle="dropdown-sales"
+                    >
+                      <span className="flex-1 ml-3 text-left whitespace-nowrap">Dashboard Github Repo</span>
+                      {/* <svg aria-hidden="true" className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg> */}
+                    </button>
+                  </Link>
+              </li>
+
               </li>
             </ul>
           </div>
-          <div className='overflow-y-auto py-5 px-3  h-1/2 bg-white border-r border-gray-2000'></div>
+          <div className='overflow-y-auto py-5 px-3  h-2/5 bg-white border-r border-gray-2000'></div>
           <div className='overflow-y-auto py-5 px-3  h-screen bg-white border-r border-gray-200'>
 
             <ul className="pt-5 mt-5 space-y-2 border-t border-gray-200">
@@ -68,4 +95,3 @@ const Sidebar = () => {
   }
   
   export default Sidebar;
-  

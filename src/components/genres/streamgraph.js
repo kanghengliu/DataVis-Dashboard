@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
+import '../home/axis.css';
 
 function Streamgraph() {
   const ref = useRef();
@@ -90,28 +91,57 @@ function Streamgraph() {
               .style('opacity', 0);
           });
 
-        // Axes
+
+        // Axis rendering with gray styling
+        const xAxis = d3.axisBottom(x).tickFormat(d => Math.abs(d));
+        const yAxis = d3.axisLeft(y);
+
+        svg.append("g")
+            .attr('transform', `translate(0,${height})`)
+            .call(xAxis);
+    
+        svg.selectAll(".tick text")
+            .style("fill", "gray"); // For text tick labels
+        
+        svg.selectAll(".tick line")
+            .style("stroke", "gray"); // For tick lines
+        
+        svg.selectAll(".domain")
+            .style("stroke", "gray"); // For the axis line
+        
+        svg.append("g")
+            .call(yAxis);
+        
+        svg.selectAll(".y-axis .tick text")
+            .style("fill", "gray"); // For text tick labels
+        
+        svg.selectAll(".y-axis .tick line")
+            .style("stroke", "gray"); // For tick lines
+        
+        svg.selectAll(".y-axis .domain")
+            .style("stroke", "gray"); // For the axis line
+
+        // Re-add labels after axis rendering
         svg.append('g')
           .attr('transform', `translate(0,${height})`)
-          .call(d3.axisBottom(x).tickFormat(d3.format('d')));
+          .append('text')
+          .attr("class", "axis-label")
+          .attr("fill", "gray")
+          .attr("y", 29)
+          .attr("x", width / 2)
+          .attr("text-anchor", "middle")
+          .text("Year");
 
-        svg.append('g')
-          .call(d3.axisLeft(y));
-
-        // Calculate tick values
-        const xDomain = x.domain();
-        // Assuming x is a d3.scaleLinear or d3.scaleTime configured for your 'year' domain
-        const xTicks = x.ticks(); // Gets the default tick values based on the scale
-
-        // Filter the ticks to show only every 15 years
-        const xTickValues = xTicks.filter((year, index) => year % 15 === 0);
-
-        // Use these filtered tick values on your x-axis
-        svg.append('g')
-        .attr('transform', `translate(0,${height})`)
-        .call(d3.axisBottom(x)
-            .tickValues(xTickValues)
-            .tickFormat(d3.format('d'))); // Format as integer if the year data is in a date-time format, adjust as necessary
+        svg.append("g")
+          .call(d3.axisLeft(y))
+          .append('text')
+          .attr("class", "axis-label")
+          .attr("fill", "gray")
+          .attr("transform", "rotate(-90)")
+          .attr("y", -37)
+          .attr("x", -height / 2)
+          .attr("text-anchor", "middle")
+          .text("Number of Movies");
       }
     });
 
