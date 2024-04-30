@@ -130,6 +130,8 @@ function Streamgraph() {
           .attr("y", 29)
           .attr("x", width / 2)
           .attr("text-anchor", "middle")
+          .style("font-size", "12px")
+          .style("font-weight", "bold")
           .text("Year");
 
         svg.append("g")
@@ -141,6 +143,8 @@ function Streamgraph() {
           .attr("y", -37)
           .attr("x", -height / 2)
           .attr("text-anchor", "middle")
+          .style("font-size", "13px")
+          .style("font-weight", "bold")
           .text("Number of Movies");
       }
     });
